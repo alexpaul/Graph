@@ -312,3 +312,5 @@ func printGraph() {
 4. [Comparison between Adjacency List and Adjacency Matrix representation of Graph](https://www.geeksforgeeks.org/comparison-between-adjacency-list-and-adjacency-matrix-representation-of-graph/)
 5. [Real-life applications](https://leapgraph.com/graph-data-structures-applications/)
 6. [Graph mapping using Core Data](https://yageek.github.io/blog/2018/02/19/a-taste-of-core-data-0-a-graph-framework/)
+7. [Wikipedia - BFS](https://en.wikipedia.org/wiki/Breadth-first_search)
+8. [Wikipedia - DFS](https://en.wikipedia.org/wiki/Depth-first_search)
