@@ -44,6 +44,9 @@ More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applicatio
 
 ## Adjacency Matrix Implementation 
 
+> Wikipedia: A two-dimensional matrix, in which the rows represent source vertices and columns represent destination vertices. Data on edges and vertices must be stored externally. Only the cost for one edge can be stored between each pair of vertices.
+
+
 ```swift 
 // adjacency matrix
 
@@ -210,3 +213,8 @@ graph.printGraph()
  4 ---> 0 (6) 4 ---> 1 (6) 4 ---> 3 (6)
 */
 ```
+
+## Resouces 
+
+1. [Wikipedia - Graph data type](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
+2. [AlgoDaily - Graphs](https://algodaily.com/lessons/implementing-graphs-edge-list-adjacency-list-adjacency-matrix)
