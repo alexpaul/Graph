@@ -166,24 +166,11 @@ graph.printGraph()
 
 struct Edge {
   public var source: Int
-  public var destination: Int
-  public var weight: Int
-  
-  init(source: Int, destination: Int, weight: Int) {
-    self.source = source
-    self.destination = destination
-    self.weight = weight
-  }
+  public var destination: Int  
 }
 
 struct Node {
   public var value: Int
-  public var weight: Int
-  
-  init(value: Int, weight: Int) {
-    self.value = value
-    self.weight = weight
-  }
 }
 
 struct Graph {
@@ -198,7 +185,7 @@ struct Graph {
     
     for edge in edges {
       // create a node for the edge
-      let node = Node(value: edge.destination, weight: edge.weight)
+      let node = Node(value: edge.destination)
       
       // append the a new node for the source vertex
       adjList[edge.source].append(node)
@@ -208,7 +195,7 @@ struct Graph {
   public func printGraph() {
     for source in 0..<adjList.count {
       for edge in adjList[source] {
-        print("\(source) ---> \(edge.value) (\(edge.weight))", terminator: " ")
+        print("\(source) ---> \(edge.value)", terminator: " ")
       }
       print()
     }
@@ -228,26 +215,26 @@ struct Graph {
  */
 
 let edges = [
-  Edge(source: 0, destination: 1, weight: 6),
-  Edge(source: 0, destination: 4, weight: 8),
+  Edge(source: 0, destination: 1),
+  Edge(source: 0, destination: 4),
   
-  Edge(source: 1, destination: 0, weight: 6),
-  Edge(source: 1, destination: 2, weight: 3),
-  Edge(source: 1, destination: 4, weight: 7),
-  Edge(source: 1, destination: 3, weight: 1),
+  Edge(source: 1, destination: 0),
+  Edge(source: 1, destination: 2),
+  Edge(source: 1, destination: 4),
+  Edge(source: 1, destination: 3),
   
-  Edge(source: 2, destination: 1, weight: 3),
-  Edge(source: 2, destination: 3, weight: 11),
+  Edge(source: 2, destination: 1),
+  Edge(source: 2, destination: 3),
   
   
-  Edge(source: 3, destination: 1, weight: 1),
-  Edge(source: 3, destination: 2, weight: 11),
-  Edge(source: 3, destination: 4, weight: 10),
+  Edge(source: 3, destination: 1),
+  Edge(source: 3, destination: 2),
+  Edge(source: 3, destination: 4),
 
 
-  Edge(source: 4, destination: 0, weight: 8),
-  Edge(source: 4, destination: 1, weight: 7),
-  Edge(source: 4, destination: 3, weight: 10),
+  Edge(source: 4, destination: 0),
+  Edge(source: 4, destination: 1),
+  Edge(source: 4, destination: 3),
 ]
 
 var graph = Graph(edges: edges)
@@ -255,11 +242,11 @@ var graph = Graph(edges: edges)
 graph.printGraph()
 
 /*
- 0 ---> 1 (6) 0 ---> 4 (8)
- 1 ---> 0 (6) 1 ---> 2 (3) 1 ---> 4 (7) 1 ---> 3 (1)
- 2 ---> 1 (3) 2 ---> 3 (11)
- 3 ---> 1 (1) 3 ---> 2 (11) 3 ---> 4 (10)
- 4 ---> 0 (8) 4 ---> 1 (7) 4 ---> 3 (10)
+ 0 ---> 1 0 ---> 4
+ 1 ---> 0 1 ---> 2 1 ---> 4 1 ---> 3
+ 2 ---> 1 2 ---> 3 
+ 3 ---> 1 3 ---> 2 3 ---> 4 
+ 4 ---> 0 4 ---> 1 4 ---> 3 
 */
 ```
 
