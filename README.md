@@ -32,7 +32,7 @@ As we can visualize from the above illustration we see that the `Adjacency List`
 
 ![](https://cdn.programiz.com/sites/tutorial2program/files/graph-vertices-edges.jpg)
 
-Using the illustration above. Draw an Adjacency Martix and an Adjacency List representation of the graph.
+Using the illustration above. Draw an **Adjacency Martix** and an **Adjacency List** representation of the graph.
 
 <details> 
   <summary>Solution</summary> 
