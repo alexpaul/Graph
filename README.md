@@ -7,6 +7,15 @@ A Graph is an abstract data structure that connects nodes or vertices via edges.
 New York -----> Saint Lucia 
 </pre> 
 
+## Examples of Grapsh in Real life 
+
+* Social Graphs
+* Path Optimization Algorithms 
+* GPS Navigation Systems
+* Facebook Graph API 
+* Recommendation Engines  
+
+
 ## Objectives 
 
 * Know graph vocabulary and terminology.
@@ -260,3 +269,4 @@ graph.printGraph()
 2. [AlgoDaily - Graphs](https://algodaily.com/lessons/implementing-graphs-edge-list-adjacency-list-adjacency-matrix)
 3. [GeeksForGeeks - Graph Data Structure and Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 4. [Comparison between Adjacency List and Adjacency Matrix representation of Graph](https://www.geeksforgeeks.org/comparison-between-adjacency-list-and-adjacency-matrix-representation-of-graph/)
+5. [Real-life applications](https://leapgraph.com/graph-data-structures-applications/)
