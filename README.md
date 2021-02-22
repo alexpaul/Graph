@@ -50,7 +50,7 @@ More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applicatio
 ```swift 
 // adjacency matrix
 
-/* 
+/*
 
  0---------1
  |       / |  \
@@ -59,49 +59,60 @@ More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applicatio
  |/        |  /
  4---------3/
  
-    0 1 2 3 4
- 0: 0 1 0 0 1
- 1: 1 0 1 1 1
- 2: 0 1 0 1 0
- 3: 0 1 1 0 1
- 4: 1 1 0 1 0
-
 */
 
 struct Graph {
-  var vertices: Int
-  var adjMatrix: [[Bool]]
+  
+  // number of vertices
+  private var vertices: Int
+  
+  // adjacency matrix
+  // we will use a [[Bool]] 2-D array to represent source -> destination relationships
+  // the rows represent the source
+  // the columns represent the destinations
+  private var adjMatrix: [[Bool]]
   
   init(vertices: Int) {
     self.vertices = vertices
+    
+    // we will build a matrix base on the number of vertices passed into the initializer
+    // all connections will be marked "false"
     self.adjMatrix = Array(repeating: Array(repeating: false, count: vertices), count: vertices)
   }
   
-  mutating func addEdge(source: Int, destination: Int) {
+  public mutating func addEdge(source: Int, destination: Int) {
+    // here we are assuming connections are part of an "undirected" graph
     adjMatrix[source][destination] = true
     adjMatrix[destination][source] = true
   }
   
-  func printGraph() {
-    var description = ""
-    for index in 0..<vertices {
-      description.append(index.description + ":")
-      for j in adjMatrix[index] {
-        description.append(j ? "1" : "0")
-        description.append(" ")
-      }
-      description.append("\n")
+  public func printGraph() {
+    // here we are building a String represenation of the graph
+    var graphDescription = "   "
+    for i in 0..<vertices {
+      graphDescription.append("\(i) ")
     }
-    print(description)
+    graphDescription.append("\n")
+    
+    for vertexIndex in 0..<adjMatrix.count {
+      graphDescription.append("\(vertexIndex): ")
+      for dest in adjMatrix[vertexIndex] {
+        graphDescription.append(dest ? "1" : "0")
+        graphDescription.append(" ")
+      }
+      graphDescription.append("\n")
+    }
+    print(graphDescription)
   }
+  
 }
 
 var graph = Graph(vertices: 5)
 
 graph.addEdge(source: 0, destination: 1)
 graph.addEdge(source: 0, destination: 4)
-graph.addEdge(source: 1, destination: 4)
 graph.addEdge(source: 1, destination: 3)
+graph.addEdge(source: 1, destination: 4)
 graph.addEdge(source: 1, destination: 2)
 graph.addEdge(source: 2, destination: 3)
 graph.addEdge(source: 3, destination: 4)
@@ -109,14 +120,13 @@ graph.addEdge(source: 3, destination: 4)
 graph.printGraph()
 
 /*
- 0:0 1 0 0 1
- 1:1 0 1 1 1
- 2:0 1 0 1 0
- 3:0 1 1 0 1
- 4:1 1 0 1 0
+ 0 1 2 3 4
+0: 0 1 0 0 1
+1: 1 0 1 1 1
+2: 0 1 0 1 0
+3: 0 1 1 0 1
+4: 1 1 0 1 0
 */
-
-
 ```
 
 ## Adjacency List Implementation
