@@ -139,10 +139,25 @@ graph.printGraph()
 ## Adjacency List Implementation
 
 ```swift 
+// adjacency list
+
+/*
+          (6)
+     0---------1
+     |       / |  \(3)
+  (8)| (7)/    |    \
+     |  /      |(1) / 2
+     |/        |  /(3)
+     4---------3/
+         (10)
+ 
+*/
+
+
 struct Edge {
-  var source: Int
-  var destination: Int
-  var weight: Int
+  public var source: Int
+  public var destination: Int
+  public var weight: Int
   
   init(source: Int, destination: Int, weight: Int) {
     self.source = source
@@ -152,8 +167,8 @@ struct Edge {
 }
 
 struct Node {
-  var value: Int
-  var weight: Int
+  public var value: Int
+  public var weight: Int
   
   init(value: Int, weight: Int) {
     self.value = value
@@ -162,72 +177,79 @@ struct Node {
 }
 
 struct Graph {
-  var adjList: [[Node]]
   
+  // adjacency list
+  private var adjList: [[Node]]
+  
+  // our initializer takes in an array of [Edge] then creates a matrix of nodes
   init(edges: [Edge]) {
+    // creates empty buckets e.g [[], [], [], []] based on how many edges (connnections)
     self.adjList = Array(repeating: [Node](), count: edges.count)
+    
     for edge in edges {
+      // create a node for the edge
       let node = Node(value: edge.destination, weight: edge.weight)
+      
+      // append the a new node for the source vertex
       adjList[edge.source].append(node)
     }
   }
   
-  func printGraph() {
-    let n = self.adjList.count
-    var source = 0
-    
-    while source < n {
-      for edge in self.adjList[source] {
-        print(source.description + " ---> " + edge.value.description + " (\(edge.weight))", terminator: " ")
+  public func printGraph() {
+    for source in 0..<adjList.count {
+      for edge in adjList[source] {
+        print("\(source) ---> \(edge.value) (\(edge.weight))", terminator: " ")
       }
       print()
-      source += 1
     }
   }
 }
 
+
 /*
+          (6)
+     0---------1
+     |       / |  \(3)
+  (8)| (7)/    |    \
+     |  /      |(1) / 2
+     |/        |  /(11)
+     4---------3/
+         (10)
+ */
 
- 0---------1
- |       / |  \
- |    /    |    \
- |  /      |    / 2
- |/        |  /
- 4---------3/
- 
-*/
+let edges = [
+  Edge(source: 0, destination: 1, weight: 6),
+  Edge(source: 0, destination: 4, weight: 8),
+  
+  Edge(source: 1, destination: 0, weight: 6),
+  Edge(source: 1, destination: 2, weight: 3),
+  Edge(source: 1, destination: 4, weight: 7),
+  Edge(source: 1, destination: 3, weight: 1),
+  
+  Edge(source: 2, destination: 1, weight: 3),
+  Edge(source: 2, destination: 3, weight: 11),
+  
+  
+  Edge(source: 3, destination: 1, weight: 1),
+  Edge(source: 3, destination: 2, weight: 11),
+  Edge(source: 3, destination: 4, weight: 10),
 
-let edges = [Edge(source: 0, destination: 1, weight: 6),
-             Edge(source: 0, destination: 4, weight: 7),
-             
-             Edge(source: 1, destination: 0, weight: 6),
-             Edge(source: 1, destination: 2, weight: 6),
-             Edge(source: 1, destination: 3, weight: 6),
-             Edge(source: 1, destination: 4, weight: 6),
-             
-             Edge(source: 2, destination: 1, weight: 6),
-             Edge(source: 2, destination: 3, weight: 6),
-             
-             Edge(source: 3, destination: 1, weight: 6),
-             Edge(source: 3, destination: 2, weight: 6),
-             Edge(source: 3, destination: 4, weight: 6),
-             
-             Edge(source: 4, destination: 0, weight: 6),
-             Edge(source: 4, destination: 1, weight: 6),
-             Edge(source: 4, destination: 3, weight: 6),
+
+  Edge(source: 4, destination: 0, weight: 8),
+  Edge(source: 4, destination: 1, weight: 7),
+  Edge(source: 4, destination: 3, weight: 10),
 ]
 
+var graph = Graph(edges: edges)
 
-let graph = Graph(edges: edges)
 graph.printGraph()
 
-
 /*
- 0 ---> 1 (6) 0 ---> 4 (7)
- 1 ---> 0 (6) 1 ---> 2 (6) 1 ---> 3 (6) 1 ---> 4 (6)
- 2 ---> 1 (6) 2 ---> 3 (6)
- 3 ---> 1 (6) 3 ---> 2 (6) 3 ---> 4 (6)
- 4 ---> 0 (6) 4 ---> 1 (6) 4 ---> 3 (6)
+ 0 ---> 1 (6) 0 ---> 4 (8)
+ 1 ---> 0 (6) 1 ---> 2 (3) 1 ---> 4 (7) 1 ---> 3 (1)
+ 2 ---> 1 (3) 2 ---> 3 (11)
+ 3 ---> 1 (1) 3 ---> 2 (11) 3 ---> 4 (10)
+ 4 ---> 0 (8) 4 ---> 1 (7) 4 ---> 3 (10)
 */
 ```
 
@@ -235,3 +257,4 @@ graph.printGraph()
 
 1. [Wikipedia - Graph data type](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
 2. [AlgoDaily - Graphs](https://algodaily.com/lessons/implementing-graphs-edge-list-adjacency-list-adjacency-matrix)
+3. [GeeksForGeeks - Graph Data Structure and Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
