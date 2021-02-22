@@ -1,6 +1,6 @@
 # Graph
 
-A Graph is an abstract data structure that connects nodes or vertices via edges. Those edges can be weighted, example the price of an airline ticket. 
+A Graph is an abstract data structure that connects nodes or vertices via edges. Those edges can be weighted, example below the edge also shows the price of an airline ticket from the "New York" vertex to the destination vertex, "Saint Lucia". 
 
 <pre> 
           $440 
