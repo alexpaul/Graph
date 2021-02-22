@@ -7,7 +7,7 @@ A Graph is an abstract data structure that connects nodes or vertices via edges.
 New York -----> Saint Lucia 
 </pre> 
 
-## Examples of Grapsh in Real life 
+## Examples of Graphs in Real life 
 
 * Social Graphs
 * Path Optimization Algorithms 
