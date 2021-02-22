@@ -253,7 +253,7 @@ graph.printGraph()
 */
 ```
 
-## Resouces 
+## Resources
 
 1. [Wikipedia - Graph data type](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
 2. [AlgoDaily - Graphs](https://algodaily.com/lessons/implementing-graphs-edge-list-adjacency-list-adjacency-matrix)
