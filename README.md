@@ -263,6 +263,42 @@ graph.printGraph()
 */
 ```
 
+## Challenge 
+
+Refactor the `printGraph()` method above for the **Adjacency List** implementation to print out the graph as follows, print order of source vertices does not matter:   
+
+```swift 
+1 ---> [0, 2, 4, 3]
+2 ---> [1, 3]
+0 ---> [1, 4]
+3 ---> [1, 2, 4]
+4 ---> [0, 1, 3]
+```
+
+<details> 
+  <summary>Solution</summary> 
+      
+```swift 
+func printGraph() {
+  var dict: [Int: [Node]] = [:]
+  for srcIndex in 0..<adjList.count {
+    for destNode in adjList[srcIndex] {
+      if let nodes = dict[srcIndex] {
+        dict[srcIndex] = nodes + [destNode]
+      } else {
+        dict[srcIndex] = [destNode]
+      }
+    }
+  }
+  
+  for (srcIndex, nodes) in dict {
+    print("\(srcIndex) ---> \(nodes.map{$0.value})")
+  }
+}
+```
+      
+</details>
+
 ## Resources
 
 1. [Wikipedia - Graph data type](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
