@@ -17,6 +17,8 @@ New York -----> Saint Lucia
 
 ![graph notes](https://user-images.githubusercontent.com/1819208/108640224-75fe0500-7466-11eb-9d6c-0b352060560c.jpg)
 
+As we can visualize from the above illustration we see that teh `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when doing algorithms such as BFS or breadth-first search on a graph.
+
 ## Vocabulary
 
 * Edge - connection between two nodes (a source and destination) 
@@ -36,8 +38,6 @@ New York -----> Saint Lucia
 * Complete Graph 
 
 ![graph types](https://media.geeksforgeeks.org/wp-content/uploads/simplegraph.png)
-
-As we can visualize from the above illustration we see that teh `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when doing algorithms such as BFS or breadth-first search on a graph.
 
 More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applications/)
 
