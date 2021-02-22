@@ -37,6 +37,8 @@ New York -----> Saint Lucia
 
 ![graph types](https://media.geeksforgeeks.org/wp-content/uploads/simplegraph.png)
 
+As we can visualize from the above illustration we see that teh `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when doing algorithms such as BFS or breadth-first search on a graph.
+
 More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applications/)
 
 
