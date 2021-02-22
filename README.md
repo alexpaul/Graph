@@ -148,6 +148,8 @@ graph.printGraph()
 
 ## Adjacency List Implementation
 
+> Wikipedia: Vertices are stored as records or objects, and every vertex stores a list of adjacent vertices.
+
 ```swift 
 // adjacency list
 
