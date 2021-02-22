@@ -59,6 +59,13 @@ More on [GeeksForGeeks](https://www.geeksforgeeks.org/graph-types-and-applicatio
  |/        |  /
  4---------3/
  
+   0 1 2 3 4
+0: 0 1 0 0 1
+1: 1 0 1 1 1
+2: 0 1 0 1 0
+3: 0 1 1 0 1
+4: 1 1 0 1 0
+ 
 */
 
 struct Graph {
@@ -120,7 +127,7 @@ graph.addEdge(source: 3, destination: 4)
 graph.printGraph()
 
 /*
- 0 1 2 3 4
+   0 1 2 3 4
 0: 0 1 0 0 1
 1: 1 0 1 1 1
 2: 0 1 0 1 0
