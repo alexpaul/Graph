@@ -342,7 +342,7 @@ graph.bfs(source: 2)
 ```
 
 
-## Depth-first Traversal 
+## Depth-first Traversal (DFS)
 
 ```swift 
 /*
