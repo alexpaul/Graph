@@ -252,12 +252,12 @@ graph.printGraph()
 
 ## Challenge 
 
-Refactor the `printGraph()` method above for the **Adjacency List** implementation to print out the graph as follows, print order of source vertices does not matter:   
+Refactor the `printGraph()` method above for the **Adjacency List** implementation to print out the graph as follows, print the vertices in ascending order.  
 
 ```swift 
+0 ---> [1, 4]
 1 ---> [0, 2, 4, 3]
 2 ---> [1, 3]
-0 ---> [1, 4]
 3 ---> [1, 2, 4]
 4 ---> [0, 1, 3]
 ```
@@ -277,8 +277,8 @@ func printGraph() {
       }
     }
   }
-  
-  for (srcIndex, nodes) in dict {
+  let sortedVertices = dict.sorted { $0.key < $1.key }
+  for (srcIndex, nodes) in sortedVertices {
     print("\(srcIndex) ---> \(nodes.map{$0.value})")
   }
 }
