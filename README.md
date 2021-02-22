@@ -28,6 +28,12 @@ New York -----> Saint Lucia
 
 As we can visualize from the above illustration we see that the `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when doing algorithms such as BFS or breadth-first search on a graph.
 
+## Challenge
+
+![](https://cdn.programiz.com/sites/tutorial2program/files/graph-vertices-edges.jpg)
+
+Using the illustration above. Draw an Adjacency Martix and an Adjacency List.
+
 ## Vocabulary
 
 * Edge - connection between two nodes (a source and destination) 
