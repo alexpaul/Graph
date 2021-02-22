@@ -27,7 +27,7 @@ New York -----> Saint Lucia
 
 ![graph notes](https://user-images.githubusercontent.com/1819208/108704410-fb6ecd00-74d9-11eb-92b0-8d22ddb354fb.jpg)
 
-As we can visualize from the above illustration we see that the `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when doing algorithms such as BFS or breadth-first search on a graph.
+As we can visualize from the above illustration we see that the `Adjacency List` representation of a graph gives a quicker visual representation of the connections or neighbors of any given vertex. This comes in very handy when when performing such algorithms on graphs like breadth-first (BFS). 
 
 ## Challenge
 
