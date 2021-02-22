@@ -23,9 +23,10 @@ As we can visualize from the above illustration we see that the `Adjacency List`
 
 * Edge - connection between two nodes (a source and destination) 
 * Vertex or Node - holds a value (data)
-* Directed Graph - direction 
+* Directed Graph - one-way direction 
 * Undirected - bi-directional
 * Graph implemenations: Edge list, Adjacency Matrix, Adjacency List
+* Neighbors
 
 ## Types of Graphs
 
