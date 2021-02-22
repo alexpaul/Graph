@@ -154,17 +154,19 @@ graph.printGraph()
 // adjacency list
 
 /*
-          (6)
      0---------1
-     |       / |  \(3)
-  (8)| (7)/    |    \
-     |  /      |(1) / 2
-     |/        |  /(3)
+     |       / |  \
+     |    /    |    \
+     |  /      |    / 2
+     |/        |  /
      4---------3/
-         (10)
- 
+         
+0 ---> [1, 4]
+1 ---> [0, 2, 4, 3]
+2 ---> [1, 3]
+3 ---> [1, 2, 4]
+4 ---> [0, 1, 3]
 */
-
 
 struct Edge {
   public var source: Int
@@ -176,7 +178,6 @@ struct Node {
 }
 
 struct Graph {
-  
   // adjacency list
   private var adjList: [[Node]]
   
@@ -204,17 +205,14 @@ struct Graph {
   }
 }
 
-
 /*
-          (6)
      0---------1
-     |       / |  \(3)
-  (8)| (7)/    |    \
-     |  /      |(1) / 2
-     |/        |  /(11)
+     |       / |  \
+     |    /    |    \
+     |  /      |    / 2
+     |/        |  /
      4---------3/
-         (10)
- */
+*/
 
 let edges = [
   Edge(source: 0, destination: 1),
@@ -228,11 +226,9 @@ let edges = [
   Edge(source: 2, destination: 1),
   Edge(source: 2, destination: 3),
   
-  
   Edge(source: 3, destination: 1),
   Edge(source: 3, destination: 2),
   Edge(source: 3, destination: 4),
-
 
   Edge(source: 4, destination: 0),
   Edge(source: 4, destination: 1),
