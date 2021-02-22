@@ -304,6 +304,83 @@ func printGraph() {
       
 </details>
 
+## Breadth-first Traversal (BFS) 
+
+```swift 
+/*
+ 0---------1
+ |       / |  \
+ |    /    |    \
+ |  /      |    / 2
+ |/        |  /
+ 4---------3/
+ 
+ BFS: 2 1 3 0 4
+*/
+
+extension Graph {
+  func bfs(source: Int) {
+    var visited: Set<Int> = []
+    var queue = [Int]()
+    visited.insert(source)
+    queue.append(source)
+    while !queue.isEmpty {
+      let sourceIndex = queue.removeFirst()
+      print("\(sourceIndex)", terminator: " ")
+      for node in adjList[sourceIndex] {
+        if !visited.contains(node.value) {
+          queue.append(node.value)
+          visited.insert(node.value)
+        }
+      }
+    }
+  }
+}
+
+graph.bfs(source: 2)
+// 2 1 3 0 4 
+```
+
+
+## Depth-first Traversal 
+
+```swift 
+/*
+ 0---------1
+ |       / |  \
+ |    /    |    \
+ |  /      |    / 2
+ |/        |  /
+ 4---------3/
+ 
+ DFS: 2 3 4 0 1
+ 
+*/
+
+
+extension Graph {
+  func dfs(source: Int) {
+    var stack = [Int]()
+    var visited: Set<Int> = []
+    stack.append(source)
+    visited.insert(source)
+    while !stack.isEmpty {
+      let source = stack.removeLast()
+      print("\(source)", terminator: " ")
+      for node in adjList[source] {
+        if !visited.contains(node.value) {
+          visited.insert(node.value)
+          stack.append(node.value)
+        }
+      }
+    }
+  }
+}
+
+graph.dfs(source: 2)
+// 2 3 4 0 1
+```
+
 ## Resources
 
 1. [Wikipedia - Graph data type](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
