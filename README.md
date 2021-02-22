@@ -184,10 +184,14 @@ graph.printGraph()
 struct Edge {
   public var source: Int
   public var destination: Int  
+  
+  // can also have a "weight" property 
 }
 
 struct Node {
   public var value: Int
+ 
+  // can also have a "weight" property 
 }
 
 struct Graph {
