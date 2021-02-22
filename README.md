@@ -48,6 +48,8 @@ Using the illustration above. Draw an **Adjacency Martix** and an **Adjacency Li
 * Vertex or Node - holds a value (data)
 * Directed Graph - one-way direction 
 * Undirected - bi-directional
+* Weighted Graph - edge has a weight 
+* Unweighed Graph - edge DOES not have weight
 * Graph implemenations: Edge list, Adjacency Matrix, Adjacency List
 * Neighbors
 
