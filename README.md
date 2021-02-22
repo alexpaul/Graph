@@ -207,11 +207,11 @@ struct Graph {
     self.adjList = Array(repeating: [Node](), count: edges.count)
     
     for edge in edges {
-      // create a node for the edge
-      let node = Node(value: edge.destination)
+      // create the destination node for the current edge
+      let destinationNode = Node(value: edge.destination)
       
-      // append the a new node for the source vertex
-      adjList[edge.source].append(node)
+      // append the new destination node to the source node
+      adjList[edge.source].append(destinationNode)
     }
   }
   
