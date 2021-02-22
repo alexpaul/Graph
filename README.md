@@ -32,14 +32,14 @@ As we can visualize from the above illustration we see that the `Adjacency List`
 
 ![](https://cdn.programiz.com/sites/tutorial2program/files/graph-vertices-edges.jpg)
 
+Using the illustration above. Draw an Adjacency Martix and an Adjacency List representation of the graph.
+
 <details> 
   <summary>Solution</summary> 
           
   ![solution](https://user-images.githubusercontent.com/1819208/108721833-73e08880-74f0-11eb-8751-93598690c677.jpg)        
           
 </details> 
-
-Using the illustration above. Draw an Adjacency Martix and an Adjacency List representation of the graph.
 
 ## Vocabulary
 
