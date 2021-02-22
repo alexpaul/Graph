@@ -40,7 +40,7 @@ As we can visualize from the above illustration we see that the `Adjacency List`
 ## Types of Graphs
 
 * Finite Graphs 
-* Infinite Grapsh 
+* Infinite Graphs
 * Trivial Graph 
 * Simple Graph 
 * Multi Graph
