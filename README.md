@@ -311,6 +311,23 @@ func printGraph() {
 
 ## Breadth-first Traversal (BFS) 
 
+#### Pseudocode 
+
+<pre> 
+start at source node
+create a queue
+create a visited set
+add source node to queue
+add source node to visited nodes (set)
+iterate queue while its not empty
+  dequeue front node
+  print node
+  iterate through sources's adjacency nodes (neighbors)
+    if edge is not yet visited
+      add to queue
+      add to visited nodes (set)
+</pre> 
+
 ```swift 
 /*
  0---------1
