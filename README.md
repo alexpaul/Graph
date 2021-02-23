@@ -206,7 +206,7 @@ struct Graph {
     
     for edge in edges {
       // create the destination node for the current edge
-      let destinationNode = Node(value: edge.destination)
+      let destinationNode = Node(value: edge.destination, weight: edge.weight)
       
       // append the new destination node to the source node
       adjList[edge.source].append(destinationNode)
