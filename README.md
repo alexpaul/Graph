@@ -215,6 +215,11 @@ struct Graph {
     }
   }
   
+  public mutating func addEdge(source: Int, destination: Int) {
+    adjList[source].append(Node(value: destination))
+    adjList[destination].append(Node(value: source))
+  }
+  
   public func printGraph() {
     for source in 0..<adjList.count {
       for edge in adjList[source] {
