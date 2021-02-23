@@ -187,14 +187,12 @@ graph.printGraph()
 struct Edge {
   public var source: Int
   public var destination: Int  
-  
-  // can also have a "weight" property 
+  public var weight: Int?   
 }
 
 struct Node {
   public var value: Int
- 
-  // can also have a "weight" property 
+  public var weight: Int?   
 }
 
 struct Graph {
@@ -215,9 +213,9 @@ struct Graph {
     }
   }
   
-  public mutating func addEdge(source: Int, destination: Int) {
-    adjList[source].append(Node(value: destination))
-    adjList[destination].append(Node(value: source))
+  public mutating func addEdge(source: Int, destination: Int, weight: Int? = nil) {
+    adjList[source].append(Node(value: destination, weight: weight))
+    adjList[destination].append(Node(value: source, weight: weight))
   }
   
   public func printGraph() {
