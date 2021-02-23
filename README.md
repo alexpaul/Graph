@@ -46,12 +46,12 @@ Using the illustration above. Draw an **Adjacency Martix** and an **Adjacency Li
 
 * Edge - connection between two nodes (a source and destination) 
 * Vertex or Node - holds a value (data)
-* Directed Graph - one-way direction 
-* Undirected - bi-directional
-* Weighted Graph - edge has a weight 
+* Directed Graph (_digraph)_ - has direction
+* Undirected - does not have direction
+* Weighted Graph - a weight is associated with the edge e.g price of airline ticket between two airports (nodes) 
 * Unweighed Graph - edge DOES not have weight
 * Graph implemenations: Adjacency Matrix, Adjacency List
-* Neighbors
+* Neighbors - a given node's adjacent nodes
 
 ## Types of Graphs
 
