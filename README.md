@@ -364,6 +364,24 @@ graph.bfs(source: 2)
 
 ## Depth-first Traversal (DFS)
 
+#### Pseudocode 
+
+<pre> 
+start at the source node
+create a stack
+create a visited set
+add the souce node to the stack
+add the source to visited nodes
+iterate through the stack while it's not empty
+  pop the source from the stack
+  print the source
+  iterate through the source's neighbours
+    if the the neighbour has not been marked visited
+      push neighbor onto the stack
+      mark neighbor visited
+</pre> 
+
+
 ```swift 
 /*
  0---------1
