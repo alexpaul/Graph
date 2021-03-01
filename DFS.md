@@ -7,6 +7,15 @@
 
 ## 1. Depth-first search on a Graph 
 
+```swift 
+0-----------1
+|           |
+|           |
+|           |
+|           |
+2-----------3
+```
+
 #### Pseudocode 
 
 <pre> 
