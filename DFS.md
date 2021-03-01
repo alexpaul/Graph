@@ -107,6 +107,17 @@ graph.dfs(source: 0)
 ## 2. Depth-first search on a 2-D Array 
 
 ```swift 
+let graph = [
+  [1, 2, 3, 4,],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]
+]
+
+// 1 5 9 13 14 10 6 2 3 7 11 15 16 12 8 4
+```
+
+```swift 
 func dfs(grid: [[Int]]) {
   let height = grid.count
   guard height > 0 else { return }
