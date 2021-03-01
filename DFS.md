@@ -118,37 +118,52 @@ let graph = [
 ```
 
 ```swift 
-func dfs(grid: [[Int]]) {
-  let height = grid.count
-  guard height > 0 else { return }
-  let length = grid[0].count
+func dfs(_ grid: [[Int]]) {
+  // we need to modify grid so make a mutable copy
+  var grid = grid
   
-  // create an array and set all values to "false" not yet visited
-  var visited = Array(repeating: Array(repeating: false, count: height), count: length)
+  // in dfs you ALWAYS want to keep track
+  // of nodes or cells in this case you've visited
   
-  // start dfs at row 0, col 0
-  dfsUtil(grid: grid, row: 0, col: 0, visited: &visited)
+  // two ways to keep track of visited nodes or cells
+  // 1. visited array [[Bool]]
+  // 2. mark the cell with an arbitrary value
+  
+  //var visited = Array(repeating: Array(repeating: false, count: grid[0].count), count: grid.count)
+  
+  for row in 0..<grid.count {
+    for col in 0..<grid[row].count {
+      // perform dfs on each cell
+        dfsUtils(&grid, row, col)
+    }
+  }
 }
 
-func dfsUtil(grid: [[Int]], row: Int, col: Int, visited: inout [[Bool]]) {
-  let height = grid.count
-  let length = grid[0].count
+func dfsUtils(_ grid: inout [[Int]], _ row: Int, _ col: Int) {
+  // we need to set up boundaries for example:
+  //   have we seen this cell before?
+  //   is the row within limits of the array
+  //   is the col withing limits of the array
   
-  // check for boundaries and if already visited
-  if row < 0 || col < 0 || row >= height || col >= length || visited[row][col] {
+  let height = grid.count // number of rows in grid
+  let length = grid[0].count // number of elements in a row
+  
+  if row < 0 || col < 0 || row >= height || col >= length || grid[row][col] == 0 {
     return
   }
   
-  visited[row][col] = true
+  // print the cell
+  print("\(grid[row][col])", terminator: " ")
   
-  print(grid[row][col], terminator: " ")
+  // mark the cell as visited
+  grid[row][col] = 0
   
-  dfsUtil(grid: grid, row: row + 1, col: col, visited: &visited) // go right
-  dfsUtil(grid: grid, row: row - 1, col: col, visited: &visited) // go left
-  dfsUtil(grid: grid, row: row, col: col + 1, visited: &visited) // go down
-  dfsUtil(grid: grid, row: row, col: col - 1, visited: &visited) // go up
+  // perform dfs on each direction in the grid recursively
+  dfsUtils(&grid, row + 1, col)
+  dfsUtils(&grid, row - 1, col)
+  dfsUtils(&grid, row, col + 1)
+  dfsUtils(&grid, row, col - 1)
 }
-
 
 let graph = [
   [1, 2, 3, 4,],
@@ -161,3 +176,13 @@ dfs(grid: graph)
 
 // 1 5 9 13 14 10 6 2 3 7 11 15 16 12 8 4
 ```
+
+## Where to go from here? 
+
+#### Graph Notes: Review
+* review adjacency list vs adjacency matrix
+* revisit binary tree traversals - dfs and bfs
+* read up on disconnected and connected graphs - https://www.tutorialspoint.com/connected-vs-disconnected-graphs
+* review bfs on a graph and a matrix
+* challenge: number of islands (LeetCode - 200. Number of Islands)
+
