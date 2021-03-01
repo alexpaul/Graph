@@ -122,21 +122,8 @@ func dfs(_ grid: [[Int]]) {
   // we need to modify grid so make a mutable copy
   var grid = grid
   
-  // in dfs you ALWAYS want to keep track
-  // of nodes or cells in this case you've visited
-  
-  // two ways to keep track of visited nodes or cells
-  // 1. visited array [[Bool]]
-  // 2. mark the cell with an arbitrary value
-  
-  //var visited = Array(repeating: Array(repeating: false, count: grid[0].count), count: grid.count)
-  
-  for row in 0..<grid.count {
-    for col in 0..<grid[row].count {
-      // perform dfs on each cell
-        dfsUtils(&grid, row, col)
-    }
-  }
+  // call our helper dfs recursive function
+  dfsUtils(&grid, 0, 0)
 }
 
 func dfsUtils(_ grid: inout [[Int]], _ row: Int, _ col: Int) {
@@ -156,6 +143,9 @@ func dfsUtils(_ grid: inout [[Int]], _ row: Int, _ col: Int) {
   print("\(grid[row][col])", terminator: " ")
   
   // mark the cell as visited
+  // two ways to keep track of visited nodes or cells
+  // 1. visited array [[Bool]]
+  // 2. mark the cell with an arbitrary value
   grid[row][col] = 0
   
   // perform dfs on each direction in the grid recursively
