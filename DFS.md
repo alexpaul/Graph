@@ -184,5 +184,5 @@ dfs(grid: graph)
 * revisit binary tree traversals - dfs and bfs
 * read up on disconnected and connected graphs - https://www.tutorialspoint.com/connected-vs-disconnected-graphs
 * review bfs on a graph and a matrix
-* challenge: number of islands (LeetCode - 200. Number of Islands)
+* challenge: number of islands [(LeetCode - 200. Number of Islands)](https://leetcode.com/problems/number-of-islands/)
 
