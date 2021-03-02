@@ -13,7 +13,6 @@ New York -----> Saint Lucia
 * Path Optimization Algorithms 
 * GPS Navigation Systems
 * Facebook Graph API 
-* GraphQL
 * Recommendation Engines  
 
 
