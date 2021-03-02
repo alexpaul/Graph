@@ -18,11 +18,11 @@ New York -----> Saint Lucia
 
 ## Objectives 
 
-- [ ] Know graph vocabulary and terminology.
-- [ ] Adjacency Matrix Implementation.
-- [ ] Adjacency List Implementation.
+- [x] Know graph vocabulary and terminology.
+- [x] Adjacency Matrix Implementation.
+- [x] Adjacency List Implementation.
+- [x] Depth-First Search of a Graph (DFS).
 - [ ] Breadth-First Search on a Graph (BFS).
-- [ ] Depth-First Search of a Graph (DFS).
 
 ![graph notes](https://user-images.githubusercontent.com/1819208/108704410-fb6ecd00-74d9-11eb-92b0-8d22ddb354fb.jpg)
 
