@@ -175,5 +175,5 @@ dfs(grid: graph)
 * read up on disconnected and connected graphs - https://www.tutorialspoint.com/connected-vs-disconnected-graphs
 * review dfs on a graph and a matrix
 * challenge: number of islands [(LeetCode - 200. Number of Islands)](https://leetcode.com/problems/number-of-islands/)
-* solution: [number of island](https://github.com/alexpaul/Graph/blob/main/Number-of-Islands.md)
+* solution: [LeetCode - Number of islands](https://github.com/alexpaul/Graph/blob/main/Number-of-Islands.md)
 
